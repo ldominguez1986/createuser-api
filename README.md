@@ -50,6 +50,7 @@ Ejecutar desde terminal:
 ````bash
 mvn spring-boot:run 
 ````
+** swagger: ** [http://localhost:8181/swagger-ui/index.html](http://localhost:8181/swagger-ui/index.html)
 
 ## Prueba Local
 Ejecutar ** curl ** desde un terminal con la siguiente instrucción:

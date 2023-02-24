@@ -25,17 +25,21 @@ import lombok.ToString;
 public class UsuarioDto {
 	
 	@NotBlank(message="Atributo 'name' es obligatorio")
+	@Schema( name="name", description = "Nombres y Apellidos del nuevo usuario")
 	private String name;
 	
 	@NotBlank(message="Atributo 'email' es obligatorio")
 	@Pattern(regexp = "^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$", message="El email ingresado no es valido")
+	@Schema( name="email", description = "Correo electronico", example = "correo@empresa.com")
 	private String email;
 	
 	@NotBlank(message="Atributo 'password' es obligatorio")
 	@Pattern(regexp = "^[a-zA-Z0-9]{7}", message="El password ingresado no es valido")
+	@Schema( name="password", description = "Contrasenia")
 	private String password;
 	
 	@NotNull
+	@Schema(name = "phones", description = "Lista de telefonos")
 	private List<TelefonoDto> phones;
 
 }

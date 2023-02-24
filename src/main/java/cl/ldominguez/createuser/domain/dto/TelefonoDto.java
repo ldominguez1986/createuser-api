@@ -21,12 +21,15 @@ import lombok.ToString;
 public class TelefonoDto {
 	
 	@NotBlank(message="Atributo 'number' es obligatorio")
+	@Schema( name="number", description = "Numero de telefono")
 	private String number;
 	
 	@NotBlank(message="Atributo 'citycode' es obligatorio")
+	@Schema( name="citycode", description = "Codigo de Cuidad")
 	private String citycode;
 	
 	@NotBlank(message="Atributo 'countrycode' es obligatorio")
+	@Schema( name="countrycode", description = "Codigo de Pais")
 	private String countrycode;
 
 }
